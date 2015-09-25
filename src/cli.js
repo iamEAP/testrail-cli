@@ -25,9 +25,11 @@ module.exports = function testrailCliFactory(coreFactory, TestRailFactory, argv,
   // Read in any/all configuration files.
   try {
     configs = YAML.load(process.cwd() + '/.testrail-cli.yml');
+    console.log(configs);
   }
   catch (Exception) {
     configs = {projectId: null, caseNameToIdMap: {}};
+    console.error(configs);
   }
 
   // Authenticate and create the TestRail client.
