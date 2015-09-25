@@ -7,6 +7,8 @@ var argv = require('minimist')(process.argv.slice(2)),
     command = argv._[0],
     cli;
 
+console.log('debugging...');
+
 // Instantiate the CLI.
 cli = cliFactory(
   require('./src/core.js'),
