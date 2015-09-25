@@ -87,7 +87,7 @@ module.exports = function constructCore(TestRail, configs, process, console) {
         else {
           if (apiCallsAttempted < maxCallAttemptsAllowed) {
             apiCallsAttempted++;
-            closeTestRun();
+            closeTestRun(runId);
           }
           else {
             console.error('There was an error closing the test run.');
