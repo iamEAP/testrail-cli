@@ -192,6 +192,7 @@ module.exports = function constructCore(TestRail, configs, process, console) {
                 else {
                   console.error('There was an error uploading test results to TestRail.');
                   console.error(response);
+                  console.error(caseResults);
                   process.exit(1);
                 }
               }
