@@ -23,6 +23,8 @@ module.exports = function testrailCliFactory(coreFactory, TestRailFactory, argv,
   }
 
   // Read in any/all configuration files.
+  console.log('debugging');
+  console.log(process.cwd());
   try {
     configs = YAML.load(process.cwd() + '/.testrail-cli.yml');
     console.log(configs);
